@@ -1,8 +1,5 @@
-import { browser } from '@wdio/globals'
-
 class welcomePage {
-    addToEstimateButton = "span.UywwFc-RLmnJb"
-       
+  addToEstimateButton = "(//span[text() = 'Add to estimate'])[2]";
 }
 
-export default new welcomePage()
+export default new welcomePage();

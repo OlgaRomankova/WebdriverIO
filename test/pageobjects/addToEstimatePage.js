@@ -1,10 +1,5 @@
-import { $ } from '@wdio/globals'
-import welcomePage from './welcomePage.js';
-
-
-class addToEstimatePage  {
-    
-    addToComputeEngineButton = "h2.C"
+class addToEstimatePage {
+  addToComputeEngineButton = "//p[contains(text(),'A secure')]";
 }
 
 export default new addToEstimatePage();
