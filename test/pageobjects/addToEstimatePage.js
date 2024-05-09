@@ -1,12 +1,10 @@
 import { $ } from '@wdio/globals'
-import Page from './Welcome to GooglePage.js';
+import welcomePage from './welcomePage.js';
 
 
-class SecurePage extends Page {
+class addToEstimatePage  {
     
-    get flashAlert () {
-        return $('#flash');
-    }
+    addToComputeEngineButton = "h2.C"
 }
 
-export default new SecurePage();
+export default new addToEstimatePage();
