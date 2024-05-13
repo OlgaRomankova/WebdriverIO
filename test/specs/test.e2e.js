@@ -6,8 +6,10 @@ import welcomePage from "../pageobjects/welcomePage.js";
 import actions from "./../actions.js";
 
 describe("Open calculator", () => {
-  it("should open welcomePage", async () => {
-    await actions.open(); // вызвала ф-ю опен с класса actions со страницы ac.js откр стр
+  it("should open welcomePage and should have the correct title", async () => {
+    await actions.open();
+    const title = await browser.getTitle();
+    expect(title).toBe("Google Cloud Pricing Calculator");
     // добавить expect проверка title действительно ли я на этой стр
   });
 
