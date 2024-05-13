@@ -12,6 +12,9 @@ describe("Open calculator", () => {
     expect(title).toBe("Google Cloud Pricing Calculator");
     // добавить expect проверка title действительно ли я на этой стр
   });
+  beforeEach(async () => {
+    await browser.maximizeWindow();
+  });
 
   it("should click on add to Estimate", async () => {
     await actions.clickElement(welcomePage.addToEstimateButton);
