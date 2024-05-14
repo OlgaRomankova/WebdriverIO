@@ -43,8 +43,9 @@ describe("Open calculator", () => {
     await actions.clickElement(calculatorPage.plusThreeButton);
   });
   it("should click on spot button", async () => {
-    const button = await $(calculatorPage.spotButton);
-    await button.scrollIntoView();
+    await browser.execute(() => {
+      window.scrollTo(0, 0);
+    });
     await actions.clickElement(calculatorPage.spotButton);
   });
   it("should click on regular button", async () => {
@@ -57,9 +58,12 @@ describe("Open calculator", () => {
     await actions.clickElement(calculatorPage.threeyearsButton);
   });
   it("should click on add to estimate 1", async () => {
+    await browser.execute(() => {
+      window.scrollTo(0, 0);
+    });
     await actions.clickElement(calculatorPage.addToEstimateButton1);
   });
-  it("should click on minus one button", async () => {
+  it("should click on Cloud storage button", async () => {
     await actions.clickElement(cloudStoragePage.cloudStorageButton);
   });
 });
