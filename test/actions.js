@@ -7,6 +7,11 @@ class actions {
 
   async clickElement(selector) {
     const element = await $(selector);
+
+    await element.scrollIntoView({
+      block: 'center',
+    });
+
     const elementIsDisplayed = await element.waitForDisplayed({ timeout: 12000 });
 
     if (elementIsDisplayed) {

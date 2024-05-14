@@ -1,17 +1,17 @@
 export const config = {
-  runner: "local",
-  specs: ["./test/specs/**/*.js"],
+  runner: 'local',
+  specs: ['./test/specs/**/*.js'],
   exclude: [],
 
   maxInstances: 10,
 
   capabilities: [
     {
-      browserName: "chrome",
+      browserName: 'chrome',
     },
   ],
 
-  logLevel: "warn",
+  logLevel: 'warn',
 
   bail: 0,
 
@@ -19,15 +19,15 @@ export const config = {
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
 
-  services: ["visual"],
-  framework: "mocha",
-  reporters: ["spec"],
+  services: ['visual'],
+  framework: 'mocha',
+  reporters: ['spec'],
 
   mochaOpts: {
-    ui: "bdd",
+    ui: 'bdd',
     timeout: 60000,
   },
-  before: function (capabilities, specs) {
-    browser.maximizeWindow();
+  async before() {
+    await browser.maximizeWindow();
   },
 };
