@@ -62,7 +62,6 @@ describe("Open calculator", () => {
       window.scrollTo(0, 0);
     });
     await actions.clickElement(calculatorPage.addToEstimateButton1);
-    // await actions.clickElement(calculatorPage.addToEstimateButton1);
   });
   it("should click on Cloud storage button", async () => {
     await actions.clickElement(cloudStoragePage.cloudStorageButton);
