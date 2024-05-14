@@ -12,15 +12,16 @@ describe("Open calculator", () => {
     expect(title).toBe("Google Cloud Pricing Calculator");
     // добавить expect проверка title действительно ли я на этой стр
   });
-  beforeEach(async () => {
-    await browser.maximizeWindow();
-  });
 
   it("should click on add to Estimate", async () => {
     await actions.clickElement(welcomePage.addToEstimateButton);
   });
   it("should click on Compute engine", async () => {
     await actions.clickElement(addToEstimatePage.addToComputeEngineButton);
+    const title = await browser.getTitle();
+    expect(title).toBe("Google Cloud Pricing Calculator");
+    const currentUrl = await browser.getUrl();
+    expect(currentUrl).toContain("calculator");
     // добавить 2 expect проверка title действительно ли я на этой стр калькулятор по слову calculator и на expect url contain
   });
   it("should click on minus one button", async () => {
@@ -42,6 +43,8 @@ describe("Open calculator", () => {
     await actions.clickElement(calculatorPage.plusThreeButton);
   });
   it("should click on spot button", async () => {
+    const button = await $(calculatorPage.spotButton);
+    await button.scrollIntoView();
     await actions.clickElement(calculatorPage.spotButton);
   });
   it("should click on regular button", async () => {
