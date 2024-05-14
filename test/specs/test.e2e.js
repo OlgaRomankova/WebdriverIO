@@ -1,4 +1,4 @@
-// import { expect } from '@wdio/globals'
+import { expect } from '@wdio/globals';
 import addToEstimatePage from '../pageobjects/addToEstimatePage.js';
 import calculatorPage from '../pageobjects/calculatorPage.js';
 import cloudStoragePage from '../pageobjects/cloudStoragePage.js';
