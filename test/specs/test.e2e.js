@@ -7,7 +7,7 @@ import actions from "./../actions.js";
 
 describe("Open calculator", () => {
   it("should open welcomePage", async () => {
-    await actions.open(); // вызвала ф-ю опен с класса actions со страницы ac.js откр стр
+    await actions.open();
     // добавить expect проверка title действительно ли я на этой стр
   });
 
