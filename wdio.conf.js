@@ -31,6 +31,7 @@ export const config = {
     await browser.maximizeWindow();
   },
   reporters: [
+    ["spec"],
     [
       "allure",
       {
