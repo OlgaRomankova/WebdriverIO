@@ -1,3 +1,4 @@
+import allure from "allure-commandline";
 export const config = {
   runner: "local",
   specs: ["./test/specs/**/*.js"],
@@ -31,7 +32,7 @@ export const config = {
     await browser.maximizeWindow();
   },
   reporters: [
-    ["spec"],
+    "spec",
     [
       "allure",
       {
@@ -41,7 +42,7 @@ export const config = {
       },
     ],
   ],
-  onComplete: function () {
+  onComplete: async function () {
     const reportError = new Error("Could not generate Allure report");
     const generation = allure(["generate", "allure-results", "--clean"]);
     return new Promise((resolve, reject) => {

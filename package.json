@@ -10,7 +10,8 @@
     "@wdio/visual-service": "^4.1.1"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js"
+    "wdio": "wdio run ./wdio.conf.js",
+    "create_report": "allure generate allure-results/ --clean && allure open"
   },
   "dependencies": {
     "allure-commandline": "^2.29.0"
