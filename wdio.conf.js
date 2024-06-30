@@ -1,19 +1,22 @@
-import allure from "allure-commandline";
+import allure from 'allure-commandline';
 
 export const config = {
-  runner: "local",
-  specs: ["./test/specs/**/*.js"],
+  runner: 'local',
+  specs: ['./test/specs/**/*.js'],
   exclude: [],
 
   maxInstances: 10,
 
   capabilities: [
     {
-      browserName: "chrome",
+      browserName: 'chrome',
+    },
+    {
+      browserName: 'edge',
     },
   ],
 
-  logLevel: "warn",
+  logLevel: 'warn',
 
   bail: 0,
 
@@ -21,19 +24,19 @@ export const config = {
   connectionRetryTimeout: 120000,
   connectionRetryCount: 3,
 
-  framework: "mocha",
+  framework: 'mocha',
 
   mochaOpts: {
-    ui: "bdd",
+    ui: 'bdd',
     timeout: 60000,
   },
 
   reporters: [
-    "spec",
+    'spec',
     [
-      "allure",
+      'allure',
       {
-        outputDir: "allure-results",
+        outputDir: 'allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: false,
         disableWebdriver: true,
