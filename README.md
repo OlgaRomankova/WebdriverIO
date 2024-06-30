@@ -32,7 +32,6 @@ Technology:
 - Language: JavaScript
 
 ---
-
 Installation:
 
     1.Clone the repository: git clone https://github.com/OlgaRomankova/-Webdriverio.git      
