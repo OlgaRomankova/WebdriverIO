@@ -9,7 +9,9 @@ export const config = {
     {
       browserName: "chrome",
     },
-    { browserName: "edge" },
+    {
+      browserName: "edge",
+    },
   ],
 
   logLevel: "warn",
