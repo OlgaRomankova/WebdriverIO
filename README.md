@@ -34,6 +34,7 @@ Technology:
 ---
 
 Installation:
+
     1.Clone the repository: git clone https://github.com/OlgaRomankova/-Webdriverio.git
     
     2.Go to the project directory, for example: `D:\Projects\Webdriverio`
