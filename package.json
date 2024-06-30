@@ -11,8 +11,10 @@
     "allure-commandline": "^2.29.0"
   },
   "scripts": {
-    "wdio": "wdio run ./wdio.conf.js",
+    "wdio": "wdio run ./wdio.all.conf.js",
     "create_report": "allure generate allure-results/ --clean && allure open",
-    "prewdio": "rm -rf allure-results"
+    "prewdio": "rm -rf allure-results",
+    "chrome": "wdio run ./wdio.chrome.conf.js",
+    "edge": "wdio run ./wdio.edge.conf.js"
   }
 }
