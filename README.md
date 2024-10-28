@@ -86,6 +86,8 @@ For both:
 ```
 BROWSER=both npx wdio run ./wdio.var.conf.js
 ```
+This way, one configuration file supports multiple launch modes, and browser selection is easily controlled through the BROWSER environment variable.
+
 After automation to view allure report , give the following commands:
 
 ```
