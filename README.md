@@ -40,13 +40,52 @@ Installation:
 3.Install dependencies: npm install
 
 ---
+This case presents two options for running autotests for Chrome, Edge, or both browsers.
+Option 1. Here is an option with three configuration files: one for Chrome, the second for Edge and the third for both browsers.
 
+wdio.chrome.conf.js — to run tests only in Chrome.
+wdio.edge.conf.js — for running tests only in Edge.
+wdio.multi.conf.js — to run tests in both browsers.
+
+---
 Running tests:
 
+Run the appropriate configuration file on the command line:
+For Chrome: 
 ```
-npm run wdio
+npm run chrome
+```
+For Edge: 
+```
+npm run edge
+```
+For both browsers: 
+```
+npm run multi
+```
+This approach allows you to flexibly select browsers to run tests, while maintaining the same basic configuration code.
+
+Option 2. In order to be able to call autotests separately for Chrome, Edge, or for two browsers at the same time, you can make the configuration more dynamic by using an environment variable. Depending on the value of this variable, you can configure the launch of the desired browser (or browsers).
+Running commands depending on the desired browser
+Now you can use different BROWSER values to run the configuration:
+
+For Chrome:
+
+```
+BROWSER=chrome npx wdio run ./wdio.var.conf.js
+
 ```
 
+For Edge:
+
+```
+BROWSER=edge npx wdio run ./wdio.var.conf.js
+```
+For both:
+
+```
+BROWSER=both npx wdio run ./wdio.var.conf.js
+```
 After automation to view allure report , give the following commands:
 
 ```
